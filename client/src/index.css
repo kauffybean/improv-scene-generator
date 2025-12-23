@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(210, 11%, 96%);
+  --foreground: hsl(210, 10%, 15%);
+  --card: hsl(210, 11%, 98%);
+  --card-foreground: hsl(210, 10%, 15%);
+  --popover: hsl(210, 11%, 98%);
+  --popover-foreground: hsl(210, 10%, 15%);
+  --primary: hsl(210, 9%, 31%);
+  --primary-foreground: hsl(210, 11%, 96%);
+  --secondary: hsl(200, 6%, 50%);
+  --secondary-foreground: hsl(210, 11%, 96%);
+  --muted: hsl(210, 11%, 93%);
+  --muted-foreground: hsl(210, 8%, 45%);
+  --accent: hsl(195, 12%, 25%);
+  --accent-foreground: hsl(210, 11%, 96%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(210, 10%, 88%);
+  --input: hsl(210, 10%, 88%);
+  --ring: hsl(210, 9%, 31%);
+  --chart-1: hsl(203.8863, 88.2845%, 53.1373%);
+  --chart-2: hsl(159.7826, 100%, 36.0784%);
+  --chart-3: hsl(42.0290, 92.8251%, 56.2745%);
+  --chart-4: hsl(147.1429, 78.5047%, 41.9608%);
+  --chart-5: hsl(341.4894, 75.2000%, 50.9804%);
+  --sidebar: hsl(180, 6.6667%, 97.0588%);
+  --sidebar-foreground: hsl(210, 25%, 7.8431%);
+  --sidebar-primary: hsl(203.8863, 88.2845%, 53.1373%);
+  --sidebar-primary-foreground: hsl(0, 0%, 100%);
+  --sidebar-accent: hsl(211.5789, 51.3514%, 92.7451%);
+  --sidebar-accent-foreground: hsl(203.8863, 88.2845%, 53.1373%);
+  --sidebar-border: hsl(205.0000, 25.0000%, 90.5882%);
+  --sidebar-ring: hsl(202.8169, 89.1213%, 53.1373%);
+  --font-sans: Inter, system-ui, sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: Menlo, monospace;
+  --radius: 12px;
+  --shadow-2xs: 0px 2px 0px 0px hsl(202.8169, 89.1213%, 53.1373%, 0.00);
+  --shadow-xs: 0px 2px 0px 0px hsl(202.8169, 89.1213%, 53.1373%, 0.00);
+  --shadow-sm: 0px 2px 0px 0px hsl(202.8169, 89.1213%, 53.1373%, 0.00), 0px 1px 2px -1px hsl(202.8169, 89.1213%, 53.1373%, 0.00);
+  --shadow: 0px 2px 0px 0px hsl(202.8169, 89.1213%, 53.1373%, 0.00), 0px 1px 2px -1px hsl(202.8169, 89.1213%, 53.1373%, 0.00);
+  --shadow-md: 0px 2px 0px 0px hsl(202.8169, 89.1213%, 53.1373%, 0.00), 0px 2px 4px -1px hsl(202.8169, 89.1213%, 53.1373%, 0.00);
+  --shadow-lg: 0px 2px 0px 0px hsl(202.8169, 89.1213%, 53.1373%, 0.00), 0px 4px 6px -1px hsl(202.8169, 89.1213%, 53.1373%, 0.00);
+  --shadow-xl: 0px 2px 0px 0px hsl(202.8169, 89.1213%, 53.1373%, 0.00), 0px 8px 10px -1px hsl(202.8169, 89.1213%, 53.1373%, 0.00);
+  --shadow-2xl: 0px 2px 0px 0px hsl(202.8169, 89.1213%, 53.1373%, 0.00);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+}
+
+.dark {
+  --background: hsl(210, 9%, 8%);
+  --foreground: hsl(210, 11%, 89%);
+  --card: hsl(210, 9%, 10%);
+  --card-foreground: hsl(210, 11%, 89%);
+  --popover: hsl(210, 9%, 8%);
+  --popover-foreground: hsl(210, 11%, 89%);
+  --primary: hsl(210, 11%, 85%);
+  --primary-foreground: hsl(210, 9%, 15%);
+  --secondary: hsl(200, 6%, 40%);
+  --secondary-foreground: hsl(210, 11%, 89%);
+  --muted: hsl(210, 9%, 12%);
+  --muted-foreground: hsl(210, 8%, 55%);
+  --accent: hsl(195, 12%, 75%);
+  --accent-foreground: hsl(210, 9%, 15%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(210, 9%, 18%);
+  --input: hsl(210, 9%, 18%);
+  --ring: hsl(210, 11%, 85%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* Cool gradient inspired by fashion brands */
+.cool-gradient {
+  background: linear-gradient(135deg, hsl(210, 9%, 18%) 0%, hsl(200, 8%, 25%) 50%, hsl(195, 12%, 30%) 100%);
+}
+
+.gradient-card {
+  background: linear-gradient(135deg, hsl(210, 11%, 98%), hsl(210, 10%, 95%));
+}
+
+/* Cool button gradient */
+.cool-button {
+  background: linear-gradient(135deg, hsl(210, 9%, 25%), hsl(200, 8%, 30%));
+  transition: all 0.2s ease;
+}
+
+.cool-button:hover {
+  background: linear-gradient(135deg, hsl(210, 9%, 30%), hsl(200, 8%, 35%));
+  transform: translateY(-1px);
+}
+
+/* Pastel rainbow gradient button */
+.pastel-rainbow-button {
+  background: linear-gradient(135deg, 
+    rgba(255, 182, 193, 0.3) 0%,   /* light pink */
+    rgba(221, 160, 221, 0.3) 15%,  /* plum */
+    rgba(173, 216, 230, 0.3) 30%,  /* light blue */
+    rgba(152, 251, 152, 0.3) 45%,  /* pale green */
+    rgba(255, 255, 224, 0.3) 60%,  /* light yellow */
+    rgba(255, 218, 185, 0.3) 75%,  /* peach */
+    rgba(255, 182, 193, 0.3) 90%   /* light pink */
+  );
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.pastel-rainbow-button:hover {
+  background: linear-gradient(135deg, 
+    rgba(255, 182, 193, 0.4) 0%,   /* slightly more saturated */
+    rgba(221, 160, 221, 0.4) 15%,
+    rgba(173, 216, 230, 0.4) 30%,
+    rgba(152, 251, 152, 0.4) 45%,
+    rgba(255, 255, 224, 0.4) 60%,
+    rgba(255, 218, 185, 0.4) 75%,
+    rgba(255, 182, 193, 0.4) 90%
+  );
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation classes */
+.floating-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px); 
+  }
+  50% { 
+    transform: translateY(-8px); 
+  }
+}
+
+.prompt-enter {
+  animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tap feedback */
+.tap-scale {
+  transition: transform 0.1s ease-in-out;
+}
+
+.tap-scale:active {
+  transform: scale(0.98);
+}
+
+/* Apply tap scale to buttons */
+button {
+  @apply tap-scale;
+}
